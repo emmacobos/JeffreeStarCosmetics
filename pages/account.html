@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../images/logo-star_180x.webp"> 
+    <title>Account</title>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/account.html">ACCOUNT</a>
+                        </li>
+                    </ul>
+                    <figure>
+                        <a href="../index.html">
+                            <img src="../images/vdaylogo_360x.png" alt="">
+                        </a>
+                    </figure>
+                    <div id="input__search">
+                        <input type="text" placeholder="Search" id="filtroNombre">
+                        <button id="limpiar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                        <button id="boton__search" type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                            <span class="badges" id="cantidad">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">YOUR BAG</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="maquillajesCarrito" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <p id="totalCarrito"> </p>
+                    <button id="confirmar" type="button" class="boton__confirmar">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main" class="page-wrap pt-5 pb-5" role="main">
+        <section id="acLogin" class="container ac-login pt-5 pb-5">    
+            <div id="acLoginForm">
+                <div class="ac-login__row d-flex flex-wrap">
+                    <div class="ssw-social-login-widget">
+                        <div class="ssw-socialconnect">
+                            <div class="ssw-fbconnect ssw-social-btn facebook"><a title="Find us on Facebook" aria-label="Find us on Facebook" href="https://www.facebook.com/JeffreeStar"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"width="24px" height="24px" viewBox="0 0 24.000000 24.000000"preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"fill="#3b5998" stroke="none"><path d="M81 227 c-69 -24 -98 -116 -54 -175 39 -53 134 -60 177 -13 80 89-10 227 -123 188z m75 -39 c4 -6 -1 -17 -11 -25 -11 -7 -13 -13 -7 -13 7 0 12-9 12 -20 0 -11 -4 -20 -10 -20 -5 0 -10 -18 -10 -41 0 -33 -3 -40 -17 -37-13 2 -20 17 -25 53 -8 55 -4 77 18 100 18 18 40 19 50 3z"/></g></svg><span>Find us on Facebook</span></a></div>
+                            <div class="ssw-gconnect ssw-social-btn"><a title="Find us on Instragram" aria-label="Find us on instagram" href="https://www.instagram.com/jeffreestarcosmetics"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="24px" height="24px"><radialGradient id="TGwjmZMm2W~B4yrgup6jda" cx="32" cy="32.5" r="31.259" gradientTransform="matrix(1 0 0 -1 0 64)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#efdcb1"/><stop offset="0" stop-color="#f2e0bb"/><stop offset=".011" stop-color="#f2e0bc"/><stop offset=".362" stop-color="#f9edd2"/><stop offset=".699" stop-color="#fef4df"/><stop offset="1" stop-color="#fff7e4"/></radialGradient><path fill="url(#TGwjmZMm2W~B4yrgup6jda)" d="M58,54c-1.1,0-2-0.9-2-2s0.9-2,2-2h2.5c1.9,0,3.5-1.6,3.5-3.5S62.4,43,60.5,43H50c-1.4,0-2.5-1.1-2.5-2.5	S48.6,38,50,38h8c1.7,0,3-1.3,3-3s-1.3-3-3-3H42v-6h18c2.3,0,4.2-2,4-4.4c-0.2-2.1-2.1-3.6-4.2-3.6H58c-1.1,0-2-0.9-2-2s0.9-2,2-2	h0.4c1.3,0,2.5-0.9,2.6-2.2c0.2-1.5-1-2.8-2.5-2.8h-14C43.7,9,43,8.3,43,7.5S43.7,6,44.5,6h3.9c1.3,0,2.5-0.9,2.6-2.2	C51.1,2.3,50,1,48.5,1H15.6c-1.3,0-2.5,0.9-2.6,2.2C12.9,4.7,14,6,15.5,6H19c1.1,0,2,0.9,2,2s-0.9,2-2,2H6.2c-2.1,0-4,1.5-4.2,3.6	C1.8,16,3.7,18,6,18h2.5c1.9,0,3.5,1.6,3.5,3.5S10.4,25,8.5,25H5.2c-2.1,0-4,1.5-4.2,3.6C0.8,31,2.7,33,5,33h17v11H6	c-1.7,0-3,1.3-3,3s1.3,3,3,3l0,0c1.1,0,2,0.9,2,2s-0.9,2-2,2H4.2c-2.1,0-4,1.5-4.2,3.6C-0.2,60,1.7,62,4,62h53.8	c2.1,0,4-1.5,4.2-3.6C62.2,56,60.3,54,58,54z"/><radialGradient id="TGwjmZMm2W~B4yrgup6jdb" cx="18.51" cy="66.293" r="69.648" gradientTransform="matrix(.6435 -.7654 .5056 .4251 -26.92 52.282)" gradientUnits="userSpaceOnUse"><stop offset=".073" stop-color="#eacc7b"/><stop offset=".184" stop-color="#ecaa59"/><stop offset=".307" stop-color="#ef802e"/><stop offset=".358" stop-color="#ef6d3a"/><stop offset=".46" stop-color="#f04b50"/><stop offset=".516" stop-color="#f03e58"/><stop offset=".689" stop-color="#db359e"/><stop offset=".724" stop-color="#ce37a4"/><stop offset=".789" stop-color="#ac3cb4"/><stop offset=".877" stop-color="#7544cf"/><stop offset=".98" stop-color="#2b4ff2"/></radialGradient><path fill="url(#TGwjmZMm2W~B4yrgup6jdb)" d="M45,57H19c-5.5,0-10-4.5-10-10V21c0-5.5,4.5-10,10-10h26c5.5,0,10,4.5,10,10v26C55,52.5,50.5,57,45,57z"/><path fill="#fff" d="M32,20c4.6,0,5.1,0,6.9,0.1c1.7,0.1,2.6,0.4,3.2,0.6c0.8,0.3,1.4,0.7,2,1.3c0.6,0.6,1,1.2,1.3,2 c0.2,0.6,0.5,1.5,0.6,3.2C46,28.9,46,29.4,46,34s0,5.1-0.1,6.9c-0.1,1.7-0.4,2.6-0.6,3.2c-0.3,0.8-0.7,1.4-1.3,2 c-0.6,0.6-1.2,1-2,1.3c-0.6,0.2-1.5,0.5-3.2,0.6C37.1,48,36.6,48,32,48s-5.1,0-6.9-0.1c-1.7-0.1-2.6-0.4-3.2-0.6 c-0.8-0.3-1.4-0.7-2-1.3c-0.6-0.6-1-1.2-1.3-2c-0.2-0.6-0.5-1.5-0.6-3.2C18,39.1,18,38.6,18,34s0-5.1,0.1-6.9 c0.1-1.7,0.4-2.6,0.6-3.2c0.3-0.8,0.7-1.4,1.3-2c0.6-0.6,1.2-1,2-1.3c0.6-0.2,1.5-0.5,3.2-0.6C26.9,20,27.4,20,32,20 M32,17 c-4.6,0-5.2,0-7,0.1c-1.8,0.1-3,0.4-4.1,0.8c-1.1,0.4-2.1,1-3,2s-1.5,1.9-2,3c-0.4,1.1-0.7,2.3-0.8,4.1C15,28.8,15,29.4,15,34 s0,5.2,0.1,7c0.1,1.8,0.4,3,0.8,4.1c0.4,1.1,1,2.1,2,3c0.9,0.9,1.9,1.5,3,2c1.1,0.4,2.3,0.7,4.1,0.8c1.8,0.1,2.4,0.1,7,0.1 s5.2,0,7-0.1c1.8-0.1,3-0.4,4.1-0.8c1.1-0.4,2.1-1,3-2c0.9-0.9,1.5-1.9,2-3c0.4-1.1,0.7-2.3,0.8-4.1c0.1-1.8,0.1-2.4,0.1-7 s0-5.2-0.1-7c-0.1-1.8-0.4-3-0.8-4.1c-0.4-1.1-1-2.1-2-3s-1.9-1.5-3-2c-1.1-0.4-2.3-0.7-4.1-0.8C37.2,17,36.6,17,32,17L32,17z"/><path fill="#fff" d="M32,25c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S37,25,32,25z M32,40c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S35.3,40,32,40 z"/><circle cx="41" cy="25" r="2" fill="#fff"/></svg><span>Find us on Instragram</span></span></a></div>  
+                            <div class="ssw-azconnect ssw-social-btn"><a title="Find us on twitter" aria-label="Find us on twitter" href="https://twitter.com/jeffreestar"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px"><path fill="#03a9f4" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3 c-0.951,0.559-2.671,1.156-3.793,1.372C31.311,15.422,30.033,15,28.617,15C25.897,15,24,17.305,24,20v2c-4,0-7.9-3.047-10.327-6 c-0.427,0.721-0.667,1.565-0.667,2.457c0,1.819,1.671,3.665,2.994,4.543c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057 c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27c0.626,1.935,3.773,2.958,5.928,3c-1.686,1.307-4.692,2-7,2 c-0.399,0-0.615,0.022-1-0.023C14.178,33.357,17.22,34,20,34c9.057,0,14-6.918,14-13.37c0-0.212-0.007-0.922-0.018-1.13 C34.95,18.818,35.342,18.104,36,17.12"/></svg><span>Find us on Twitter</span></a></div>
+                        </div>
+                    </div>
+                    <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8" class="ac-login__col ac-login__col--1 col-md-6 col-12 col-lg-4"">
+                        <input type="hidden" name="form_type" value="customer_login">
+                        <input type="hidden" name="utf8" value="✓">  
+                        <div class="section-header">
+                            <h1 class="section-header__hdg">
+                                Sign In
+                            </h1>
+                        </div>
+                        <div class="form-list">
+                            <div class="ac-login__col-bd cf">
+                                <div class="form-item">
+                                    <div class="input-placeholder">
+                                        <input id="footerNewsletterEmail" placeholder="Email" class="input" type="email" data-email="email" name="customer[email]" autocorrect="off" autocapitalize="off" autofocus="">
+                                    </div>
+                                </div>                
+                                <div class="form-item">
+                                    <div class="input-placeholder">
+                                        <input id="customerPassword" placeholder="Password" type="password" data-password="password" class="input" name="customer[password]">
+                                    </div>
+                                </div>                
+                            </div>
+                            <div class="ac-login__col-ft cf">
+                                <div class="form-item">
+                                    <button class="botonsignIn" type="button" onclick="signUp()">
+                                        Sign In
+                                    </button>
+                                </div>                         
+                            </div>
+                        </div>
+                        <input type="hidden" name="return_url" value="/account">
+                    </form> 
+                    <div class="ac-login__col ac-login__col--2 col-md-12 col-lg-4 align-items-center">
+                        <div class="section-header">
+                            <h2 class="section-header__hdg">
+                                    New Account
+                            </h2>
+                        </div>
+                        <div class="ac-login__col-bd">
+                            <p class="ac-login__register-desc">
+                                Faster checkout,<br>multiple shipping addresses,<br>track orders and more.
+                            </p>
+                        </div>
+                        <div class="ac-login__col-ft">
+                            <a href="../pages/createaccount.html">
+                                <button class="botonsignIn" type="button">
+                                    Create Account
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="filtroRender" class="d-none"></div>
+    <div id="Productos" class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 g-4 d-none">    
+    </div>
+
+    <div class="container-fluid footer">
+        <div><img class="background-footer" src="../images/backgroundfooter.webp" alt=""></div>
+        <div class="container footer__content">
+        <a class="footer__logo" href="/" aria-label="Home page">
+            <div class="footer-logo">
+                <img class="lazyaut" src="../images/jsc-footer-logo-white_180x.webp">
+            </div>
+        </a>
+        <h3 class="footer-newsletter__heading">Sign up for the latest</h3>
+        <form id="footerNewsletterForm" class="footer-newsletter form-inline">
+            <div class="footer-newsletter__wrapper form-inline__input input-placeholder">
+                <label for="footerNewsletterEmail" class="footer-newsletter__label" aria-label="email">
+                </label>
+                <input id="footerNewsletterEmail" class="footer-newsletter__input input" type="email" required="" placeholder="email@emailaddress.com">
+            </div>
+            <button id="footerNewsletterSubmit" class="footer-newsletter__btn form-inline__btn" type="button" aria-label="Sign up for the newsletter" onclick="signUp()">Sign Up</button>
+        </form>
+      
+        <ul class="list-reset footer__list footer__list--centered footer__list--social">
+            <li class="footer__item footer__item--social pe-5">
+                <a href="https://www.youtube.com/user/jeffreestar" class="footer__link footer__link--flex-centered">
+                    <i class="footer__icon icon icon--youtube"></i>
+                    <span class="screenreader">youtube</span>
+                </a>
+            </li>
+            <li class="footer__item footer__item--social pe-5">
+                <a href="https://www.facebook.com/jeffreeStar" class="footer__link footer__link--flex-centered">
+                    <i class="footer__icon icon icon--facebook"></i>
+                    <span class="screenreader">facebook</span>
+                </a>
+            </li>
+            <li class="footer__item footer__item--social pe-5">
+                <a href="https://www.instagram.com/jeffreestarcosmetics/" class="footer__link footer__link--flex-centered">
+                    <i class="footer__icon icon icon--instagram"></i>
+                    <span class="screenreader">instagram</span>
+                </a>
+            </li>
+            <li class="footer__item footer__item--social pe-5">
+                <a href="https://twitter.com/jeffreestar" class="footer__link footer__link--flex-centered">
+                    <i class="footer__icon icon icon--twitter"></i>
+                    <span class="screenreader">twitter</span>
+                </a>
+            </li>
+        </ul>
+        <div class="footer__legal flex-wrap d-flex justify-content-center">
+            <span class="footer__link footer__link--small" style="color: #fff">© 2022 Jeffree Star Cosmetics, Inc. All rights reserved.&nbsp;</span> 
+            <ul class="flex-column ps-0 list-reset footer__list footer__list--flex d-flex">
+                <li class="footer__item footer__item--legal">
+                    <a href="/pages/terms-and-conditions" class="footer__link footer__link--small" style="color: #fff">Terms &amp; Conditions</a>
+                </li>
+                <li class="footer__item footer__item--legal">
+                    <a href="/pages/privacy-policy" class="footer__link footer__link--small" style="color: #fff">Privacy Policy</a>
+                </li>
+                <li class="footer__item footer__item--legal">
+                    <a href="/pages/faq" class="footer__link footer__link--small" style="color: #fff">Accessibility</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>   
+    <script src="../js/globales.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/producto.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

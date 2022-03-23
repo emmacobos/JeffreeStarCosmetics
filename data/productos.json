@@ -1,0 +1,8 @@
+[{"id":1,"nombre":"MAGIC STAR™ CONCEALER","tono":"C23.5","precio":22,"img":"../images/concealer.jpg", "seccion" : "FACE","cantidad":1},
+{"id":2,"nombre":"F*CK PROOF MASCARA","tono":"very black","precio":27,"img":"../images/mascara.jpg","seccion" : "EYES","cantidad":1},
+{"id":3,"nombre":"MAGIC STAR™ SETTING POWDER","tono":"Lavender","precio":22,"img":"../images/settingpowder.jpg","seccion" : "FACE","cantidad":1},
+{"id":4,"nombre":"HYDRATING GLITZ LIP BALM","tono":"Pink Roses","precio":25,"img":"../images/lipstick.jpg","seccion" : "LIPS","cantidad":1},
+{"id":5,"nombre":"EXTREME FROST™","tono":"LICK MY GLIT","precio":50,"img":"../images/highlighter.jpg","seccion" : "FACE","cantidad":1},
+{"id":6,"nombre":"PALETTE","tono":"JAWBREAKER","precio":58,"img":"../images/eyeshadow.jpg","seccion" : "EYES","cantidad":1},
+{"id":7,"nombre":"AUTOMATIC EYELINER","tono":"Lime green","precio":20,"img":"../images/delineador.png","seccion" : "EYES","cantidad":1},
+{"id":8,"nombre":"VELOUR LIP LINER","tono":"Allegedly","precio":16,"img":"../images/lipliner.jpg","seccion" : "LIPS","cantidad":1}]
